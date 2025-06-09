@@ -30,7 +30,7 @@
 #define LASER_TRIS                       TRISA
 #define LASER_ANSEL                      ANSELA
 
-#define LASER                            PORTBbits.RA0
+#define LASER                            PORTAbits.RA0
 
 // PIC18F27K40 Configuration Bit Settings
 // CONFIG1L
