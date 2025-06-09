@@ -24,6 +24,7 @@
 
 #define LED_REGISTER                     TRISB
 #define LED_ANSEL                        ANSELB
+#define LED_LAT LATB
 #define LED_PORT                         PORTB
 #define LED_TRIS                         TRISB
 
