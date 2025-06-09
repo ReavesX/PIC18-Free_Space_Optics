@@ -20,6 +20,7 @@
 #define INPUT_PORT                       PORTC
 #define INPUT_LAT                        LATC
 
+
 #define PHOTOTRANSISTOR                  PORTCbits.RC7
 
 #define LED_REGISTER                     TRISB
