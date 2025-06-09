@@ -17,20 +17,22 @@
 // I/O Pin Definitions
 #define INPUT_TRIS                       TRISC
 #define INPUT_ANSEL                      ANSELC
+#define INPUT_PORT                       PORTC
+#define INPUT_LAT                        LATC
 
 #define PHOTOTRANSISTOR                  PORTCbits.RC7
 
-
 #define LED_REGISTER                     TRISB
 #define LED_ANSEL                        ANSELB
-#define LED_TRIS                        TRISB
+#define LED_PORT                         PORTB
+#define LED_TRIS                         TRISB
 
 #define ERROR_LED                        LATBbits.LATB7
 #define LED_1                            LATBbits.LATB0
 
 #define LASER_TRIS                       TRISA
 #define LASER_ANSEL                      ANSELA
-#define LASER_LAT                       LATA
+#define LASER_LAT                        LATA
 #define LASER                            LATAbits.LATA0
 
 // PIC18F27K40 Configuration Bit Settings
