@@ -23,14 +23,15 @@
 
 #define LED_REGISTER                     TRISB
 #define LED_ANSEL                        ANSELB
+#define LED_TRIS                        TRISB
 
 #define ERROR_LED                        LATBbits.LATB7
 #define LED_1                            LATBbits.LATB0
 
 #define LASER_TRIS                       TRISA
 #define LASER_ANSEL                      ANSELA
-
-#define LASER                            PORTAbits.RA0
+#define LASER_LAT                       LATA
+#define LASER                            LATAbits.LATA0
 
 // PIC18F27K40 Configuration Bit Settings
 // CONFIG1L
