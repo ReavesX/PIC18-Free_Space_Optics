@@ -14,28 +14,20 @@
 #define OFF     0
 #define CLR     0
 
-// I/O Pin Definitions
-#define INPUT_TRIS                       TRISC
-#define INPUT_ANSEL                      ANSELC
-#define INPUT_PORT                       PORTC
-#define INPUT_LAT                        LATC
+#define INPUT   1
+#define OUTPUT  0
 
+#define HIGH    1
+#define LOW     0
 
-#define PHOTOTRANSISTOR                  PORTCbits.RC7
+#define PHOTOTRANSISTOR         TRISCbits.TRISC7
+#define PHOTOTRANSISTOR_BIT     PORTCbits.RC7
 
-#define LED_REGISTER                     TRISB
-#define LED_ANSEL                        ANSELB
-#define LED_LAT LATB
-#define LED_PORT                         PORTB
-#define LED_TRIS                         TRISB
+#define ERROR_LED               TRISAbits.TRISA1
+#define ERROR_LED_BIT           LATBbits.LATB7
 
-#define ERROR_LED                        LATBbits.LATB7
-#define LED_1                            LATBbits.LATB0
-
-#define LASER_TRIS                       TRISA
-#define LASER_ANSEL                      ANSELA
-#define LASER_LAT                        LATA
-#define LASER                            LATAbits.LATA0
+#define LED_OUT1                TRISBbits.TRISB0
+#define LED_OUT1_BIT            LATBbits.LATB0
 
 // PIC18F27K40 Configuration Bit Settings
 // CONFIG1L
