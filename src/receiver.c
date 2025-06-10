@@ -1,32 +1,24 @@
 #include "receiver.h"
 #include "device_config.h"
-
-
+#include <xc.h>
 
 void receive(void) {
+    // === Pin Setup ===
+    PHOTOTRANSISTOR = INPUT;
+    ANSELCbits.ANSELC7 = 0;
+
+    LED_OUT1 = OUTPUT;
+    ANSELBbits.ANSELB0 = 0;
+
+    ERROR_LED = OUTPUT;
+    ANSELBbits.ANSELB7 = 0;
+
     // === Main Loop ===
     while (1) {
-
-        /* 
-        === catch if phototransistor is receiving input
-           === the phototransistor being low would indicate no
-           === input from the user. The error LED (rb7) stays on until
-           === there is a high signal from hitting the phototransistor
-           === with a laser
-        */
-        if (PHOTOTRANSISTOR == LOW) { 
-            ERROR_LED = HIGH;
-            LED_1 = LOW;
-        } 
-        /*
-            === The only other state is that the phototransistor
-            === is receiving input of high, and would then make the output
-            === LED (rb0) turn on.
-        
-        */
-        else { 
-            LED_1 = HIGH;
-            ERROR_LED = LOW;
+        if (PHOTOTRANSISTOR_BIT == LOW) {
+            ERROR_LED_BIT = HIGH;
+        } else {
+            portb++
         }
     }
 }
