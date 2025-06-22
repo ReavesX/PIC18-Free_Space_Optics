@@ -1,14 +1,23 @@
 #include "device_config.h"
 
 void device_config(void){
-// === Pin Setup ===
-    PHOTOTRANSISTOR = INPUT;
-    ANSELCbits.ANSELC7 = 0;
+    OSCCON1 = 0x60; // HFINTOSC, NDIV=1
+    OSCFRQ = 0x00;  // 1 MHz
 
-    LED_OUT1 = OUTPUT;
-    ANSELBbits.ANSELB0 = 0;
+    
+    // === Pin Setup ===
 
-    ERROR_LED = OUTPUT;
-    ANSELBbits.ANSELB7 = 0;
+    TRISA = OUTPUT;
+    LATA = OUTPUT;
+    ANSELA = OFF;
+    
+    TRISB = OUTPUT;
+    LATB = OUTPUT;
+    ANSELB = OFF;
+    
+    TRISC = INPUT;
+    LATC = INPUT
+    ANSELC = OFF;
+
 
 }
